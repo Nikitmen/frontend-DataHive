@@ -1,0 +1,155 @@
+:root {
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --radius: 12px;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --transition: all 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--gray-50);
+  color: var(--gray-900);
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-light);
+}
+
+/* --- Контейнеры --- */
+.ant-card {
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.ant-card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Кнопки --- */
+.ant-btn {
+  border-radius: 8px !important;
+  transition: var(--transition);
+}
+
+.ant-btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.ant-btn-primary:hover {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+/* --- Теги --- */
+.ant-tag {
+  border-radius: 6px !important;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.ant-tag:hover {
+  transform: scale(1.05);
+}
+
+/* --- Инпуты --- */
+.ant-input-affix-wrapper {
+  border-radius: 8px !important;
+  transition: var(--transition);
+}
+
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* --- Текст и заголовки --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--gray-900);
+  font-weight: 600;
+}
+
+.ant-typography {
+  color: var(--gray-900);
+}
+
+/* --- Адаптив --- */
+@media (max-width: 768px) {
+  body {
+    padding: 0.75rem;
+  }
+
+  .ant-card {
+    border-radius: 10px !important;
+  }
+
+  .ant-btn {
+    font-size: 0.95rem;
+  }
+}
+
+.dataset-card {
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.dataset-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dataset-card.expanded {
+  border-color: var(--primary-light) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.dataset-preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.09) !important;
+}
+
+.dataset-preview-card .ant-card-body {
+  padding: 20px;
+}
+
+.profile-header {
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.ant-card {
+  border-radius: 12px;
+}
