@@ -118,24 +118,44 @@ export default function DatasetPage() {
                         Открыть внешний источник
                     </Button>
                 )}
-                {local_path && <Button disabled>Скачать</Button>}
+
+                {local_path ? (
+                    <Button type="primary" href={local_path}>
+                        Скачать
+                    </Button>
+                ) : (
+                    <Button disabled>Скачать</Button>
+                )}
             </Space>
+
 
             <Card style={{ marginTop: 28 }}>
                 <Row gutter={16}>
                     {record_count !== null && (
                         <Col xs={24} md={8}>
-                            <Statistic title="Количество записей" value={record_count} />
+                            <Statistic
+                                title="Количество записей"
+                                value={record_count}
+                            />
                         </Col>
                     )}
+
                     {size !== null && (
                         <Col xs={24} md={8}>
-                            <Statistic title="Размер датасета (MB)" value={size} />
+                            <Statistic
+                                title="Размер датасета (MB)"
+                                value={size}
+                            />
                         </Col>
                     )}
+
                     {year && (
                         <Col xs={24} md={8}>
-                            <Statistic title="Год добавления" value={year} />
+                            <Statistic
+                                title="Год добавления"
+                                value={year}
+                                formatter={(v) => v}
+                            />
                         </Col>
                     )}
                 </Row>

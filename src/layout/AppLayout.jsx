@@ -79,7 +79,7 @@ export default function AppLayout({ children }) {
                 </div>
 
                 <div style={{ fontSize: 14, color: "#555" }}>
-                    Разработано студентами РТУ МИРЭА · КВМО-11-25 · 2025
+                    Разработано студентами РТУ МИРЭА · КВМО-11-25 · 2026
                 </div>
             </Footer>
         </Layout>
